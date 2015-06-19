@@ -1,3 +1,5 @@
+var path = require('path');
+
 exports.plain = function (response)
 {
     response.send('This is a plain text message');
@@ -5,7 +7,8 @@ exports.plain = function (response)
 
 exports.html = function (response)
 {
-    response.sendFile('/var/code/node-demo/demo/views/static.html');
+    var location = path.resolve(__dirname + '/../views/static.html');
+    response.sendFile(location);
 }
 
 exports.logic = function (request, response)

@@ -1,10 +1,13 @@
 var spawn   = require('child_process').spawn
-,   server  = require('http').createServer();
+,   server  = require('http').createServer()
+,   path    = require('path');
 
 server.on('request', function (request, response)
 {
     response.writeHead(200, {'Content-Type': 'text/plain'});
-    var job = spawn('/var/code/node-demo/sh/bash.sh');
+
+    var bash = path.resolve(__dirname + '/../sh/bash.sh')
+    ,   job = spawn(bash);
 
     job.stdout.on('data', function (data)
     {
