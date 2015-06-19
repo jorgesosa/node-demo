@@ -2,7 +2,6 @@
 A little node demo and benchmarking
 
 ## Requirements
-There are very small requirements for this.
 
 1. LAMP for setting up your php demo
 2. Bash-enabled environment for running the sh
