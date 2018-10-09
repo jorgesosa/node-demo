@@ -1,5 +1,5 @@
 # node-demo
-A little node demo and benchmarking
+A little node demo and benchmarking tool.
 
 ## Requirements
 
